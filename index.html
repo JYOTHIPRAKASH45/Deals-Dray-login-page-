@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Page App with OTP Verification</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id="splash" class="page">
+        <h1>Welcome to the<br> Deals Dray</h1>
+        <p>Biggest Sales</p>
+        <button onclick="showLogin()">Go to Login</button>
+    </div>
+
+    <div id="login" class="page hidden">
+        <h1>Login</h1>
+        <button onclick="loginWithPhone()">Login with Phone</button>
+        <button onclick="loginWithEmail()">Login with Email</button>
+    </div>
+
+    <div id="phoneEntry" class="page hidden">
+        <h1>Enter Mobile Number</h1>
+        <input type="text" placeholder="Enter mobile number" id="phoneInput">
+        <button onclick="proceedToOTP()">Send OTP</button>
+    </div>
+
+    <div id="otp" class="page hidden">
+        <h1>Phone OTP Verification</h1>
+        <input type="text" placeholder="Enter OTP" id="otpInput">
+        <button onclick="verifyOTP()">Verify OTP</button>
+        <button onclick="resendOTP()">Resend OTP</button>
+    </div>
+
+    <div id="email" class="page hidden">
+        <h1>Email Login</h1>
+        <input type="email" placeholder="Enter Email" id="emailInput">
+        <input type="password" placeholder="Enter Password" id="passwordInput">
+        <button onclick="register()">Register</button>
+    </div>
+
+    <div id="register" class="page hidden">
+        <h1>Register</h1>
+        <input type="text" placeholder="Enter Referral Code" id="referralInput">
+        <button onclick="fetchProducts()">Submit and Fetch Products</button>
+    </div>
+
+    <div id="products" class="page hidden">
+        <h1>Products</h1>
+        <ul id="productList"></ul>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
